@@ -1,0 +1,50 @@
+<main class="main-content">
+    <section class="center">
+        <h1 class="title">Share a video</h1>
+        <form 
+            id="postVideoBox"
+            action="/posts/create"
+            method="POST"
+            enctype="multipart/form-data"> 
+            {{!-- sent mutiple type of data --}}
+            <div>
+                <label for="vTitle">Title (required) </label>
+                <input 
+                type="text" 
+                name="title" 
+                id ="vTitle"
+                placeholder="Your video title" 
+                required
+                >
+            </div>
+            <div>
+                <label for="description">Description (required)</label>
+                 <textarea 
+                 placeholder="Tell viwers about your video" 
+                 name="description"
+                 required>
+                 </textarea>
+            </div>
+            <div>
+                <label for="video"></label>
+                <input type="file" 
+                name="uploadvideo" 
+                class ="choose"
+                placeholder="Select file" 
+                required
+                accept="video/*"
+                >
+            </div> 
+            <div class="checkbox-group">
+                <input type="checkbox" name="comfirm" value=1 required>
+                <label for="comfirm">
+                    I have read and accept the  
+                    <a href="https://www.youtube.com/watch?v=hWvM6de6mG8" target="_blank">
+                    Term of Service and Privacy Policy
+                    </a>
+                </label>
+            </div>
+            <input type="submit" value="Post" class="button post">    
+        </form>  
+    </section>
+</main>

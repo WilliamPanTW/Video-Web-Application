@@ -1,0 +1,191 @@
+.box{
+    margin: auto;
+    border-radius: 5px;
+    width: 300px;
+    color: black;
+}
+
+.videoBox {
+    background: var(--whiteBack); 
+    margin-top: 20px; 
+}
+
+.commentBox {
+    border-top: 2px solid var(--footerBack);
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+video{
+    height: auto;
+    width: 200px;
+    margin-top: 20px;
+}
+
+.video1-title{
+    padding-right: 30px;
+    margin-bottom: -0.2px;
+    margin-top: -4px;
+}
+.author{
+    display: inline-flex; 
+    position: relative;
+    font-size:16px;
+    padding-right: 90px;
+    margin-top: -200px;
+}
+
+.time{
+    margin-top: -25px;
+    font-size:14px;
+}
+
+.leaveComment{
+    padding-top: 10px;
+}
+
+textarea{
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid var(--footerBack);
+    margin: auto;
+    display: block ;
+    margin-top: -25px; 
+    transition: border-color 0.3s ease;
+    outline: none;
+}
+
+textarea:focus-within{
+    border-bottom: white;
+}
+textarea::placeholder {
+    line-height: 3em;
+}
+
+.comment:hover{
+    transform: none;
+    background-color: #3EA6FF ;
+}
+
+.cancel{
+    background-color: transparent;
+}
+
+.cancel:hover{
+    transform: none;
+    background-color:#3F3F3F ;
+    color: white;
+}
+
+#jump-to-top-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+  
+  #jump-to-top-button:hover {
+    background-color: #3e8e41;
+  }
+
+  .commentsContainer {
+    /* Align comments to the left */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    background-color: var(--footerBack);
+    padding: 20px; /* Adjust the padding value to match the desired spacing */
+    margin-left: 20px; /* Compensate for the left padding on videoBox */
+    margin-right: 20px; 
+  }
+  
+  .comment-author {
+    /* Align author to the left */
+    text-align: left;
+  }
+  
+  .comment-text {
+    /* Align comment text to the left */
+    text-align: left;
+  }
+  
+  .comment-date {
+    /* Change the color of comment date */
+    color: #f7f7f773; /* Replace #FF0000 with your desired color code */
+  }
+
+  .comment{
+    margin-bottom: 10px;
+  }
+  .profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    padding: 20px; /* Adjust the padding value to match the desired spacing */
+    margin-left: 20px; /* Compensate for the left padding on videoBox */
+    margin-right: 20px; 
+}
+
+.authorInfo {
+    text-align: left;
+}
+
+.profilePtag {
+    text-align: left;
+}
+
+#profileIcon {
+    text-align: left;
+}
+
+#video-title{
+    text-align: left;
+} 
+@media screen and (min-width: 550px) {
+        video{
+            width: 500px;
+            height: auto;
+        }
+
+        .box{
+            width: 550px;
+        }
+        .video1-title{
+            padding-right: 340px;
+        }
+        .author{
+            padding-right: 400px;
+        }
+        
+        .time{
+            padding-right: 320px;
+        }
+    }
+    
+@media screen and (min-width: 850px) {
+        video{
+            width: 800px;
+            height: auto;
+        }
+        .box{
+            width: 850px;
+        }
+        .video1-title{
+            padding-right:640px;
+        }
+        .author{
+            padding-right: 700px;
+        }
+        
+        .time{
+            padding-right: 600px;
+        }
+    }
+
+
+    

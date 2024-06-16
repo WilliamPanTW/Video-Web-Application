@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://fonts.cdnfonts.com/css/star-wars" rel="stylesheet">
+        <link rel="stylesheet" href="..\css\design.css">
+        <link rel="stylesheet" href="..\css\Register.css">
+        <script defer src="../js/validation.js" ></script>
+        <title>Registration</title>
+    </head>  
+    <body>
+        <div class="container">
+            <header class="page-header">
+            <nav>
+                <div class="logo">CSC Web</div>
+                    <ul class="links">
+                        <li><a href="Index.html">Home</a></li>
+                        <li><a href="registration.html">Registration</a></li>
+                        <li><a href="postvideo.html">Post video</a></li>
+                        <li><a href="viewpost.html">View post</a></li>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+            </nav>
+            </header>
+        <main class="main-content">
+        <section class="center">
+        <h1 class="title"> Guests Register </h1>
+        <form id="reg-form">
+            <div id="wrapperUser">
+                <div id="UserInput">
+                    <label for="username">Username</label>
+                    <input 
+                    type="text" 
+                    id ="User"
+                    placeholder="Username" 
+                    required
+                    >
+                </div>
+                <div id="UserValidation">
+                    <div id="UserBegins">
+                        <span>Begins with a character ([a-zA-Z])</span>
+                    </div>  
+                    <div id="UserAlpha">
+                        <span>Has 3 or more alphanumeric characters</span>
+                    </div>  
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                    <input 
+                    type="email" 
+                    id ="email"
+                    placeholder="email" 
+                    required
+                    >    
+            </div>
+                <div id="wrapperPass">
+                    <div id="passDiv">
+                        <label for="password">Password</label>
+                        <input 
+                          type="text" 
+                          id="password"
+                          placeholder="Password" 
+                          required
+                        >
+                    </div>    
+                    <div id='PassValidation'>
+                        <div id="check0">
+                        <span>Has at least 8 characters</span>
+                        </div>  
+                        <div id="check1">
+                        <span>Has at least 1 Upper case letter</span>
+                        </div> 
+                        <div id="check2">
+                        <span>Has at least 1 numerical character</span>
+                        </div> 
+                        <div id="check3">
+                        <span>Has at least 1 of the following(/*-+!@#$^&~[])</span>
+                        </div>            
+                    </div>
+                </div>
+                <div id="wrapperconfirm">
+                    <div class="input-group" id="confirmInput">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input 
+                        type="text" 
+                        id ="cpassword"
+                        placeholder="Confirm Password" 
+                        required
+                        >
+                    </div>   
+                    <div id="match">
+                        <span id="pm">password match</span>
+                    </div>    
+                </div> 
+                <div class="input-group">
+                <fieldset>
+                    <legend>Are you over 13?</legend>
+                    <input 
+                    type="radio" 
+                    name="Age_confirm"
+                    id="Yes" 
+                    required
+                    >
+                    <label for="Yes" >Yes</label>
+                    <input 
+                    type="radio" 
+                    name="Age_confirm"  
+                    id="No"
+                    required
+                    >
+                    <label for="No" >No</label>
+                </fieldset>
+                </div>
+                <div class="checkbox-group">
+                    <input 
+                    type="checkbox" 
+                    name="Age_confirm"  
+                    value=1 
+                    required
+                    >
+                    <label for="comfirm">
+                        I have read and accept the  
+                        <a 
+                        href="https://media-cldnry.s-nbcnews.com/image/upload/t_social_share_1024x768_scale,f_auto,q_auto:best/streams/2012/May/120523/383994-rickroll.jpg" target="_blank">
+                        Term of Service & Privacy Policy
+                        </a>
+                    </label>
+                </div>
+                <div>
+                    <input type="reset" value="clear" class="button reset">   
+                    <input type="submit" value="submit" class="button submit">   
+                </div>
+        </form>  
+        </section>
+        </main>
+        </div>
+    </body>
+</html>

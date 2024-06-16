@@ -1,0 +1,120 @@
+<main class="main-content">
+<section class="center">
+    <h1 class="title"> Guests Register </h1>
+        <form id="reg-form"
+            action="/users/register"
+            method ="POST"
+            enctype="application/x-www-form-unlencoded">
+            <div id="wrapperUser">
+                <div id="UserInput">
+                    <label for="username">Username</label>
+                    <input 
+                    type="text" 
+                    id ="User"
+                    placeholder="Username" 
+                    name="username"
+                    required
+                    >
+                </div>
+                <div id="UserValidation">
+                    <div id="UserBegins">
+                        <span>Begins with a character ([a-zA-Z])</span>
+                    </div>  
+                    <div id="UserAlpha">
+                        <span>Has 3 or more alphanumeric characters</span>
+                    </div>  
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="email" id="firefox">Email</label>
+                    <input 
+                    type="email" 
+                    id ="email"
+                    placeholder="email" 
+                    name="email"
+                    required
+                    >    
+            </div>
+                <div id="wrapperPass">
+                    <div id="passDiv">
+                        <label for="password">Password</label>
+                        <input 
+                            type="text" 
+                            id="password"
+                            placeholder="Password" 
+                            name="password"
+                            required
+                        >
+                    </div>    
+                    <div id='PassValidation'>
+                        <div id="check0">
+                        <span>Has at least 8 characters</span>
+                        </div>  
+                        <div id="check1">
+                        <span>Has at least 1 Upper case letter</span>
+                        </div> 
+                        <div id="check2">
+                        <span>Has at least 1 numerical character</span>
+                        </div> 
+                        <div id="check3">
+                        <span>Has at least 1 of the following(/*-+!@#$^&~[])</span>
+                        </div>            
+                    </div>
+                </div>
+                <div id="wrapperconfirm">
+                    <div class="input-group" id="confirmInput">
+                        <label for="cPassword">Confirm Password</label>
+                        <input 
+                        type="text" 
+                        id ="cpassword"
+                        placeholder="Confirm Password" 
+                        name="cPassword"
+                        required
+                        >
+                    </div>   
+                    <div id="match">
+                        <span id="pm">password match</span>
+                    </div>    
+                </div> 
+                <div class="input-group">
+                <fieldset>
+                    <legend>Are you over 13?</legend>
+                    <input 
+                    type="radio" 
+                    name="ageCheck" 
+                    value="yes"
+                    required
+                    >
+                    <label for="Yes" >Yes</label>
+                    <input 
+                    type="radio" 
+                    name="ageCheck"  
+                    value="no"
+                    required
+                    >
+                    <label for="No" >No</label>
+                </fieldset>
+                </div>
+                <div class="checkbox-group">
+                    <input 
+                    type="checkbox" 
+                    name="tosCheck"
+                    value="yes"  
+                    required
+                    >
+                    <label for="comfirm">
+                        I have read and accept the  
+                        <a 
+                        href="https://media-cldnry.s-nbcnews.com/image/upload/t_social_share_1024x768_scale,f_auto,q_auto:best/streams/2012/May/120523/383994-rickroll.jpg" target="_blank">
+                        Term of Service and Privacy Policy
+                        </a>
+                    </label>
+                </div>
+                <div>
+                    <input type="reset" value="clear" class="button reset">   
+                    <input type="submit" value="submit" class="button submit">   
+                </div>
+        </form>  
+    </section>
+</main>
+

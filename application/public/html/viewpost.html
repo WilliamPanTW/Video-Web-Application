@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://fonts.cdnfonts.com/css/star-wars" rel="stylesheet">
+        <link rel="stylesheet" href="..\css\design.css">
+        <link rel="stylesheet" href="..\css\ViewPost.css">
+        <title>ViewPost</title>
+    </head>  
+    <body>
+        <div class="container">
+            <header class="page-header">
+            <nav>
+                <div class="logo">CSC Web</div>
+                    <ul class="links">
+                        <li><a href="Index.html">Home</a></li>
+                        <li><a href="Registration.html">Registration</a></li>
+                        <li><a href="Postvideo.html">Post video</a></li>
+                        <li><a href="Viewpost.html">View post</a></li>
+                        <li><a href="Profile.html">Profile</a></li>
+                        <li><a href="Login.html">Login</a></li>
+                    </ul>
+            </nav>
+            </header>
+            <main class="main-content">
+                <section class="box videoBox">
+                <div class="video1">
+                    <video controls class="watch">
+                        <source src=http://techslides.com/demos/sample-videos/small.webm type=video/webm> 
+                        <source src=http://techslides.com/demos/sample-videos/small.ogv type=video/ogg> 
+                        <source src=http://techslides.com/demos/sample-videos/small.mp4 type=video/mp4>
+                        <source src=http://techslides.com/demos/sample-videos/small.3gp type=video/3gp>
+                        Your browser does not support the video tag.
+                    </video>
+                        <h1 class="video1-title">Lego Demo</h1>
+                </div>
+                <div class="author">
+                    <p><i class='far fa-user-circle'>Yankees</i></p>
+                </div>
+                <div class="time">
+                    <p>Publish on <time>Feb 26,2023</time></p>
+                </div>
+                <div class="box commentBox ">
+                    <p class="leaveComment">Leave us a comment</p>
+                    <form>
+                        <textarea placeholder="Add a Comments ...." required></textarea>
+                        <input type="submit" value="Comment" class="button comment"> 
+                        <input type="reset" value="Cancel" class="button cancel">  
+                    </form>
+                </div>
+            </section>
+            </main>
+        </div>
+    </body>
+</html>

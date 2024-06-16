@@ -1,0 +1,48 @@
+  <div class="profilePost">
+      <a href="/posts/{{this.id}}">
+        <img class="profileThumb" src="/{{this.thumbnail}}" type="image/png">
+      </a>
+      <a class="profileTitle" href="/posts/{{this.id}}">
+        <p >{{this.title}}</p>
+      </a>
+      <button class="posterbutton posterEdit">edit</button>
+      <form action="">
+          <button class="posterbutton posterDelete"  id="deletedButton{{this.id}}">Delete</button>
+      </form>
+</div>
+
+<script>
+document.getElementById('deletedButton{{this.id}}').addEventListener('click', async function() {
+  var postId = "{{this.id}}"; 
+  console.log(postId);
+
+  try {
+    const response = await fetch("/posts/delete", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        postId: postId
+      })
+    });
+
+    if (response.ok) {
+      // Post deleted successfully
+      console.log("Post deleted");
+      // Refresh the page
+      window.location.reload();
+    } else {
+      // Post deletion failed
+      console.log("Failed to delete post");
+      // Perform any UI updates or display error message here
+    }
+  } catch (error) {
+    console.error("An error occurred while deleting the post:", error);
+    // Handle the error and display an error message if needed
+  }
+});
+
+  
+
+</script>

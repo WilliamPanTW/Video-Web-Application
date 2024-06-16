@@ -1,0 +1,18 @@
+<div>
+    <div id="drop-button">
+        <button id="drop-icon">
+            <i id="drop-profile">
+                {{user.username}}
+            </i>
+              <i id="downIcon" class="fa-solid fa-chevron-down"></i>
+        </button>
+    </div>
+    <div id="drop-menu">
+        <li class="notLogged"><a href="/users/profile/{{user.userId}}">Profile</a></li> 
+        <form action="/users/logout" method="post">
+            <button type="submit" id="drop-logout">Log out   <i class="fa-solid fa-right-from-bracket"></i></button>
+        </form>
+    </div>
+</div>
+
+   

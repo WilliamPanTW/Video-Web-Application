@@ -1,0 +1,32 @@
+<header class="page-header">
+    <nav id="nav-bar">
+        <div class="logo">CsTube</div>
+        <div id="searchVideoBox">
+            <form action="/posts/search"
+            method="GET" 
+            id="searchBar" 
+            enctype="application/x-www-form-urlencoded">
+                <label for="searchVideo" id="searchLabel"></label>
+                <input type="text" 
+                name="searchValue" 
+                id ="searchInputField"
+                placeholder="Search" 
+                type="text"
+                >
+                <button type="submit" id="SearchSubmit">
+                    <i class="fas fa-search" id="searchIcon"></i>
+                </button> 
+            </form>
+        </div>
+        <ul class="links">
+            <li><a href="/home">Home</a></li>
+            <li class="notLogged"><a href="/postvideo">Post video</a></li>
+            {{#if isLoggedIn}}
+                {{> userdropdown}}
+            {{else}}
+                <li><a href="/registration">Registration</a></li>
+                <li><a href="/login">Login</a></li>     
+            {{/if}}
+        </ul>               
+    </nav>      
+</header>

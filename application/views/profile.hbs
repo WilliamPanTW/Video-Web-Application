@@ -1,0 +1,17 @@
+<main class="main-content">
+  <section id="profile">
+    <div id="posterProfile">
+        <div id="profileName">{{user.username}} channel</div>
+        <address id="profileEmail" role="user_email">{{user.email}} </address>
+    </div>  
+    <div id="channelpost">
+        <div id="channelVideo">Video</div>
+        <div id="channelTitle">Title</div>
+    </div>
+        {{#each getPosts}}
+          {{#> postDisplay this}}
+              <div>Load error</div>
+          {{/postDisplay}}
+      {{/each}} 
+  </section>
+</main>

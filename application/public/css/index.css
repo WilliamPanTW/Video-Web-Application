@@ -1,0 +1,323 @@
+    :root {
+        background-repeat: no-repeat;
+        --blue: #011A43;
+        --footerBack: rgba(63, 61, 61, 0.5);
+        --footerWord: #dfcfcf; 
+        --green :#42B826; 
+        --red: #A50020 ; 
+        --whiteBack: #c7c3ba;
+        --yellow: #ffc62a;
+        --errorGreenbox :#D7EDDF; 
+        --errorGreen :#426957; 
+        --errorRedbox: #F8D5DC ; 
+        --errorRed: #76434C ; 
+        --searchBlue: #262932 ; 
+        --searchwhite: #F5F5F5 ; 
+    }
+    *,
+    *::after,
+    *::before {
+        box-sizing: border-box;
+    }
+    
+       
+    body * {
+        text-align: center;
+    }
+    
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+.logo{
+    font-family: 'Star Wars', sans-serif;
+    color: white;
+    font-size: 2rem;
+}
+.container {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "header"
+    "mcontent"
+    "lsidebar"
+    "rsidebar"
+    "footer";
+}
+.page-header {
+    background-color: #222222;
+    grid-area: header;
+    padding: 1rem;
+
+}
+
+.links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.links li {
+    display: inline-block;
+    margin: 20px;
+    padding: 0;
+}
+
+nav ul {
+    /* nav bar */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: .5em;
+    grid-auto-flow: row;
+}
+
+
+nav li {
+    font-size: 1.2rem;
+    background-color: var(--footerBack);
+    border-radius: .35rem;
+    padding: 12px 16px;
+}
+
+nav a {
+    /* anchor tag in nav item */
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+nav a:hover{
+   color: orange;
+}
+section {
+    font-size: 1.2rem;
+    color: white;
+}
+
+#Intro{
+    --outline: #1654c0 ;
+    font: 800 40px 'Star Wars', sans-serif;
+    -webkit-text-fill-color: black;
+    -webkit-text-stroke: 0.8px;
+    color:var(--outline);
+}
+
+body{
+    background-color: grey;
+}
+
+.flash-message {
+    display: inline-block;
+    position: absolute;
+    width: 380px;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+ 
+.flash-message.hide {
+    opacity: 0;
+}
+
+#flash-error {
+    background-color: var(--errorRedbox);
+    color: var(--errorRed);
+}
+  
+#flash-success {
+    background-color: var(--errorGreenbox);
+    color: var(--errorGreen);
+}
+
+#drop-menu{
+    right: 22px;
+    margin-top: 10px;
+    position: absolute;
+    padding: 0.2em 0.5em;
+    padding-bottom: 0.8em;
+    border-radius: 0.5em;
+    background-color: #323741;
+    border: 1px #363a43 solid;
+    flex-direction: column;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+#drop-icon{
+    color: white;
+    border: none;
+    background-color: transparent;
+}
+
+
+#drop-icon:hover{
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    color: #bfbfbf;
+}
+
+#drop-menu li, #drop-menu form {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+#drop-logout{
+    padding-top: 15px;
+    text-align: left;
+    color: white;
+    border: none; 
+    background-color: transparent;
+ }
+
+ #drop-logout:hover {
+    transform: scale(1.2); 
+ }
+
+ #drop-profile::before {
+    content: "\f2bd";
+    font-family: "Font Awesome 5 Free";
+ }
+
+ #drop-profile {
+    display: block;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+#downIcon{
+    position: absolute;
+    margin-top: -2px;
+    right: 28px;
+}
+
+#searchVideoBox {
+    display: flex;
+    align-items: center;
+    background-color: var(--searchwhite);
+    border-radius: 20px;
+    padding: 5px; /* adjust this value to change the height */
+    margin: 0;
+}
+  
+  #searchLabel {
+    display: none;
+  }
+  
+  #searchInputField {
+    border: none;
+    background: none;
+    width: 220px;
+    font-size: 16px;
+    padding: 10px 8px; /* adjust this value to change the height */
+    margin: 0;
+    outline: none;
+  }
+  
+  #SearchSubmit {
+    background-color: var(--searchBlue);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 0 20px 20px 0; /* top-left, bottom-left, bottom-right, top-right */
+    cursor: pointer;
+  }
+  
+  #searchIcon {
+    font-size: 18px;
+  }
+
+  .videoContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Adjust the alignment as needed */
+  }
+  
+  .videoBox {
+    flex-basis: calc(33.33% - 20px);
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .videoBox:nth-child(3n+2) {
+    order: 2;
+  }
+  
+  .cardLink{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    background-color: lightgray;
+    padding: 10px;
+  }
+  
+  .posterThumb {
+    max-width: 100%;
+    max-height: 200px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .cardTitle {
+    margin-top: 5px;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .magic {
+    position: relative;
+    display: inline-block;
+    font-size: 2rem;
+  }
+  
+  .magic::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -25px;
+    transform: translateY(-50%);
+    width: 80px;
+    height: 40px;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    animation: glass-move 1s linear infinite alternate;
+  }
+  
+  @keyframes glass-move {
+    0% {
+      left: -25px;
+    }
+    100% {
+      left: calc(100% - 55px);
+    }
+  }
+
+  #RecentPost {
+    background-color: #f8f8f8; /* Replace with your desired shallow shade of gray */
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    width: 30%; /* Adjust the width value to your preference */
+    margin: 0 auto; /* Center the element horizontally */
+  }

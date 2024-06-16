@@ -1,0 +1,64 @@
+.center{
+    margin: auto;
+    width: 200px;
+    background: var(--whiteBack);
+    color: black;
+    border-radius: 10px;
+}
+
+.title{
+    padding-top: 10px;
+}
+
+#UserInput{
+    display: inline-block; 
+}
+
+#UserValidation,#PassValidation{
+    position: absolute;
+    display: inline-block; 
+    background-color: antiquewhite;
+    color: red;
+    padding: 10px;
+    margin: 3px;
+    display: none; 
+}
+
+#UserBegins,#UserAlpha,#check0 ,#check1,#check2,#check3{
+    text-align: left;
+}
+
+#passDiv{
+    display: inline-block;
+}
+
+#pm{
+    color: black;
+}
+
+.button{
+    color: white;
+}
+
+.submit{
+    background-color: var(--blue);
+}
+
+.reset{
+    background-color: var(--red);
+}
+
+.valid-text{
+    color: green;
+}
+.valid-text::before{
+    color: green;
+    font-family: FontAwesome;
+    content: "\f00c"; 
+}
+
+.invalid-text::before{
+    color: red;
+    font-family: FontAwesome;
+    content: "\f00d"; 
+}

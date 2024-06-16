@@ -1,0 +1,31 @@
+.center{
+    margin: auto;
+    width: 300px;
+    background: var(--whiteBack);
+    color: black;
+    border-radius: 10px;
+}
+
+#postVideoBox{
+    list-style: none;
+    display: grid;
+    gap: .4em;
+    grid-auto-flow: row;
+}
+
+.choose{
+    padding-left: 46px;
+}
+
+.post{
+    background-color: var(--yellow);
+}
+
+.post:hover{
+    color:red;
+}
+
+
+
+
+

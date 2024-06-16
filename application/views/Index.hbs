@@ -1,0 +1,28 @@
+<main>
+  <div id="wrapper">
+    {{#if posts.length}}
+      <div class="videoContainer">
+        {{#each posts}}
+          {{#> card this}}
+            <div>Load error</div>
+          {{/card}}
+        {{/each}}
+      </div>
+    {{/if}}
+
+    {{#if recentPosts.length}}
+        <p id="RecentPost">Nothing match, People also watched</p>
+        <div class="videoContainer">
+          {{#each recentPosts}}
+            {{#> card this}}
+              <div>Load error</div>
+            {{/card}}
+          {{/each}}
+        </div>
+    {{/if}}
+  
+  </div>
+    <footer>
+      William Pan &copy; 2023
+    </footer>
+</main>

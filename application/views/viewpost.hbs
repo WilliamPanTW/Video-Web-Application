@@ -1,0 +1,49 @@
+<a href="#nav-bar" class="jump-to-top-button" id="jump-to-top-button">back to top</a>
+<main class="main-content">
+    {{!-- {{log this}} --}}
+    <section class="box videoBox">
+        <div class="video1" id="video1">
+            <video controls class="watch">                
+                <source src="/{{currentPost.video}}" type=video/mp4>
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="profile-container">
+            <h1 class="video-title">{{currentPost.title}}</h1>
+            <div class="authorInfo">
+                <p class="profilePtag"><i id="profileIcon" class='far fa-user-circle'>{{currentPost.username}}</i></p>
+                <p class="profilePtag">Publish on <time>{{formatDateString currentPost.createAt}}</time></p>
+            </div>
+            <details>
+                <summary class="detail-title"> read description</summary>
+                <p>{{currentPost.description}}</p>
+            </details>
+        </div>
+        
+        <div class="box commentBox ">   
+            <p class="leaveComment">Leave us a comment</p>
+            <div class="comment-box">
+            {{!-- delete "form" to achieve comment without refresh --}}
+                <form>
+                    <textarea id="comment-text" placeholder="Add a Comments ...." required></textarea>
+                    <input 
+                    type="submit"
+                    id="comment-button" 
+                    class="button comment"
+                    aria-hidden="true"
+                    data-postid="{{currentPost.id}}"
+                    > 
+                    <input type="reset" class="button cancel">  
+                </form>
+            </div>
+        </div>
+        <div id="commentsContainer" class="commentsContainer">
+        {{#each currentPost.comments}}
+            {{#> comments this}}
+            <div>Load error</div>
+            {{/comments}}
+        {{/each}}
+         </div>
+    </section>
+</main>
+

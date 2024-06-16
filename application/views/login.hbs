@@ -1,0 +1,35 @@
+<main class="main-content">
+<section class="center">
+    <h1 class="title">login</h1>
+    <form action="/users/login" 
+    method="POST" 
+    enctype="application/x-www-form-unlencoded">
+        <div class="input-group">
+            <label for="Username" id="firefox">User</label>
+            <input type="text" 
+            name="username" 
+            class ="input-field"
+            placeholder="Username" 
+            required
+            >
+        </div>
+        <div>
+            <label for="password" id="godown">Password</label>
+            <input type="password" 
+            name="password" 
+            class ="input-field"
+            placeholder="password"
+            required
+            >
+        </div>
+        <div class="input-group">                
+            <input type="submit" value="login" class="button submit">    
+        </div>
+        <div class="input-group" id="free">   
+            <a href="/registration">
+                <input type="button" value="Sign up" class="button sign-up">   
+            </a>             
+        </div>
+    </form>  
+</section>
+</main>

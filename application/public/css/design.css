@@ -1,0 +1,179 @@
+    /* Not this one */
+    :root {
+        --star: url('https://lumiere-a.akamaihd.net/v1/images/star-wars-backgrounds-25_bc15ec98.jpeg');
+        background-repeat: no-repeat;
+        --blue: #011A43;
+        --footerBack: rgba(63, 61, 61, 0.5);
+        --footerWord: #dfcfcf; 
+        --green :#42B826; 
+        --red: #A50020 ; 
+        --whiteBack: #c7c3ba;
+        --yellow: #ffc62a;
+    }
+    *,
+    *::after,
+    *::before {
+        box-sizing: border-box;
+    }
+    
+    
+    html {
+        font-size: 16px;
+        font-family: 'Open Sans',sans-serif;
+    }
+    
+    body {
+        background-image:var(--star) ;
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: center;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    
+    body * {
+        text-align: center;
+    }
+    
+    header {
+        padding: 1rem;
+    }
+    
+    nav ul {
+        /* nav bar */
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: .5em;
+        grid-auto-flow: row;
+    }
+    
+    
+    nav li {
+        font-size: 1.2rem;
+        background-color: var(--footerBack);
+        border-radius: .35rem;
+        padding: 12px 16px;
+    }
+    
+    nav a {
+        /* anchor tag in nav item */
+        text-decoration: none;
+        color: white;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+    }
+    nav a:hover{
+       color: orange;
+    }
+    nav .logo{
+        font-family: 'Star Wars', sans-serif;
+        color: white;
+        font-size: 2rem;
+    }
+ 
+    .container {
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-areas:
+        "header"
+        "mcontent"
+        "lsidebar"
+        "rsidebar"
+        "footer";
+    }
+    
+    .page-header {
+        background-color: #222222;
+        grid-area: header;
+    }
+    
+    .main-content {
+        min-height: 75vh;
+        grid-area: mcontent;
+    }
+
+    
+    .page-footer {
+        background-color: var(--footerBack);
+        padding: 1em;
+        color: var(--footerWord);
+        font-size: 0.8rem;
+        grid-area: footer;
+    }
+    
+    .button{
+        border: none;
+        padding: 8px 16px;
+        margin: 12px;
+        border-radius:16px;
+        color: black;
+        background-color: var(--yellow);
+    }
+    
+    .title{
+        padding-top: 10px;
+    }
+
+    .input-group{
+        padding: 3px;
+        margin: 8px;
+    }
+    
+    .button:hover{
+        cursor: pointer;
+        transform: scale(2);
+    }
+
+    .checkbox-group{
+        font-size:13px;
+    }
+
+    .valid-txt{
+        outline: solid green;
+    }
+    
+    .invalid-txt{
+        outline: solid red;
+    }
+    
+    @media screen and (min-width: 550px) {
+        nav ul {
+            grid-auto-flow: column;
+        }
+        nav li{
+            background-color: transparent;
+        }
+        .container {
+            grid-template-areas: 
+            "header header"
+            "mcontent mcontent"
+            "lsidebar rsidebar"
+            "footer footer";
+        }
+    }
+    
+    @media screen and (min-width: 850px) {
+        .page-header {
+            background-color: transparent;
+        }
+        
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .container {
+            grid-template-areas: 
+            "header header header"
+            "mcontent mcontent mcontent"
+            "footer footer footer";
+        }
+    }
+    
