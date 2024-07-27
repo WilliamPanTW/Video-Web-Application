@@ -31,6 +31,7 @@ PORT=3000
 
 ## Run Instructions
 1. Navigate/cd to the "/csc317-code-90561lkk/application" directory in terminal.
-2. Start the application by running "npm start".
-3. Open your browser and enter or click http://localhost:3000/home in url.
-4. Enjoy searching and using the application!
+2. Execute "npm run builddb" to initial the database
+3. Start the application by running "npm start".
+4. Open your browser and enter or click http://localhost:3000/home in url.
+5. Enjoy searching and using the application!
